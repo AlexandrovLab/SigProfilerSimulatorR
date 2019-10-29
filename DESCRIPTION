@@ -1,0 +1,15 @@
+Package: SigProfilerSimulatorR
+Type: Package
+Title: An R wrapper for running the SigProfilerSimulator framework
+Version: 0.1.0
+Author: Erik Bergstrom
+Maintainer: Erik Bergstrom <ebergstr@eng.ucsd.edu>
+Description: SigProfilerSimulator allows realistic simulations of mutational patterns and mutational 
+			signatures in cancer genomes. The tool can be used to simulate signatures of single point 
+			mutations, double point mutations, and insertion/deletions. Further, the tool makes use 
+			of SigProfilerMatrixGenerator and SigProfilerPlotting. 
+License: BSD 2-Clause
+Encoding: UTF-8
+LazyData: true
+Imports:
+	reticulate, devtools

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1572382934521.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1805757641",
+    "id" : "2E25A4EF",
+    "lastKnownWriteTime" : 1572384570,
+    "last_content_update" : 1572384570781,
+    "path" : "~/Desktop/lab_shared_code/SigProfilerSimulatorR/R/SigProfilerSimulatorR.R",
+    "project_path" : "R/SigProfilerSimulatorR.R",
+    "properties" : {
+        "cursorPosition" : "26,19",
+        "scrollLine" : "18"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
