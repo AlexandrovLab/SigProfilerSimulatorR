@@ -7,6 +7,8 @@ An R wrapper for running the SigProfilerSimulator (https://osf.io/usxjz/wiki/hom
 
 The purpose of this document is to provide a guide for using the SigProfilerSimulator framework to simulate mutational signatures in cancer. It allows for realistic simulations of single point mutations, double point mutations, and insertions/deletions with the goal of providing a background model for statistical analysis. The simulations are performed in an unbiased fashion, relying on random chance as the main distribution and can be performed across the entire genome or limited to user-provided ranges.. An extensive Wiki page detailing the usage of this tool can be found at https://osf.io/usxjz/wiki/home/. For users that prefer working in a Python environment, the tool is written in Python and can be found and installed from: https://github.com/AlexandrovLab/SigProfilerSimulator
 
+![Schematic](Figure1.png)
+
 **PREREQUISITES**
 
 devtools  (R) 
@@ -121,10 +123,13 @@ For all errors, please email the error and progress log files to the primary con
 
 **CITATION**
 
+Erik N. Bergstrom, Mark Barnes, Iñigo Martincorena, Ludmil B. Alexandrov
+bioRxiv 2020.02.13.948422; doi: https://doi.org/10.1101/2020.02.13.948422
+https://www.biorxiv.org/content/10.1101/2020.02.13.948422v1
 
 **COPYRIGHT**
 
-Copyright (c) 2019, Erik Bergstrom [Alexandrov Lab] All rights reserved.
+Copyright (c) 2020, Erik Bergstrom [Alexandrov Lab] All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
