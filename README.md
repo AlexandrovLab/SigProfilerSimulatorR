@@ -62,7 +62,7 @@ If you do not see your python3 path listed, restart your R session and rerun the
 5. From within the same R session, you can now simulate mutational patterns/signatures as follows:
 ```
 >> library("SigProfilerSimulatorR")
->> SigProfilerSimulatorR("BRCA", "/Users/ebergstr/Desktop/BRCA/", "GRCh37", contexts=c("96"), exome=NULL, simulations=100, updating=FALSE, bed_file=NULL, overlap=FALSE, gender='female',  chrom_based=FALSE, seed_file=NULL, noisePoisson=FALSE, noiseAWGN=0, cushion=100, region=NULL)
+>> SigProfilerSimulatorR("BRCA", "/Users/ebergstr/Desktop/BRCA/", "GRCh37", contexts=list(c("96")), exome=NULL, simulations=100, updating=FALSE, bed_file=NULL, overlap=FALSE, gender='female',  chrom_based=FALSE, seed_file=NULL, noisePoisson=FALSE, noiseAWGN=0, cushion=100, region=NULL)
 ```
   The layout of the required parameters are as follows:
   
@@ -83,12 +83,15 @@ If you do not see your python3 path listed, restart your R session and rerun the
       noiseAWGN=0:       [integer] Add a noise dependent on a +/- allowance of noise (ex: noiseAWGN=5 allows +/-2.5\% of mutations for each mutation type). Default is 0 noise. 
       cushion=100:       [integer] Allowable cushion when simulating on the exome or targetted panel. Default is 100 base pairs
       region=NULL:       [string] Path to targetted region panel for simulated on a user-defined region. Default is whole-genome simulations.
-  
+      vcf=False		[boolean] Outputs simulated samples as vcf files with one file per iteration per sample. By default, the tool outputs all samples from an iteration into a single maf file.
+      mask=None	[string] Path to probability mask file. A mask file format is tab-separated with the following required columns: Chromosome, Start, End, Probability.
+                                              Note: Mask parameter does not support exome data where bed_file flag is set to true, and the following header fields are required: Chromosome, Start, End, Probability.
+
 
 
 **INPUT FILE FORMAT**
 
-This tool currently supports maf, vcf, simple text file, and ICGC formats. The user must provide variant data adhering to one of these four formats. If the users' files are in vcf format, each sample must be saved as a separate files. 
+This tool currently supports maf, vcf, simple text file, and ICGC formats. The user must provide variant data adhering to one of these four formats. If the users' files are in vcf format, each sample must be saved as a separate files. For an example input file, please download the simple text file "example.txt" from the following link: [example.txt](https://osf.io/7rdkh/)
 
 
 **Output File Structure**
@@ -115,6 +118,8 @@ Released Jan 2011. Last updated March 2012. This genome was downloaded from ENSE
 
 rn6 (Rnor_6.0) INSDC Assembly GCA_000001895.4, Jul 2014. Released Jun 2015. Last updated Jan 2017. 
 This genome was downloaded from ENSEMBL database version 96.6.
+
+yeast (Saccharomyces cerevisiae S288C; assembly R64-2-1). Released Nov 2014. 
 
 **LOG FILES**
 
